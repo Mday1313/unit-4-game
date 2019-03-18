@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 var targetNumber = 0;
 var randomValue = 0;
-var crystalValue = 0;
+
 // counter store and adds user clicks 
 var counter = 0;    
 var isTargetReached = false;
@@ -54,24 +54,45 @@ var losses = 0;
 
         for (var i = 0; i < 4; i++) {
             randomValue = Math.floor(Math.random() * 12) + 1;
-            var imageCrystal = $("<img>");
-            imageCrystal.addClass("crystal-image");
-            // give each crystal data attribute called 
-            imageCrystal.attr("data-crystalvalue", randomValue[i]);
-            $("#crystal").append(imageCrystal);
-
-            console.log(imageCrystal);
             console.log(randomValue);
-            } 
-        }
+         
             
+            // give each crystal data attribute called 
+            $("#crystal").attr("data-crystalvalue", randomValue[i]);
+            
+            var imageValue = $("crystal");
+
+          console.log(imageValue);
+            
+      
+        
+        
+        } 
+
+  
+// function for click event
+        // lines 63 on in 12.html activity simple crystal game
+
+
+        // $(".crystal").on("click", function(event) {
+            
+        //     // extract value for crystal assigned in last step using data tag
+        //     var crystalValue = ($(this).attr("data-crystalvalue"));
+        //     console.log(crystalValue);
+        //     crystalValue = parseInt(crystalValue);
+            
+        //     counter += crystalValue;
+    
+        //     $(".count-text").text(counter);
+        //     console.log(crystalValue);
+        // });
+
+       
+    }   
            
             
 
 
-// function for click event
-        // lines 63 on in 12.html activity simple crystal game
-function createCrystalPicker() {
 
 
 
@@ -79,7 +100,6 @@ function createCrystalPicker() {
 
 
 
-}
     // if 
 
 
@@ -101,5 +121,6 @@ function createCrystalPicker() {
         // }
     
     
-    
+        randNumber();
+        
     });
