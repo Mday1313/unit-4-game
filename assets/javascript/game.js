@@ -13,7 +13,8 @@ $(document).ready(function() {
 // Declare global variables targetNumber (will display at top for user to match), empty crystal array [will hold randomly generated crystal values], counter
 
 var targetNumber = 0;
-var randomValue = 0;
+
+
 
 // counter store and adds user clicks 
 var counter = 0;    
@@ -49,43 +50,48 @@ var losses = 0;
         $(".target-number").text(targetNumber);
         // for each crystal,
                 // randomly pick different number for each crystal, value between 1-12
-        
        
+      var randomValue = [];
+        for (var i = 0; i < 3; i++) {
+            randomValue[i] = Math.floor(Math.random() * 12) + 1;
+            randomValue.push(i);
 
-        for (var i = 0; i < 4; i++) {
-            randomValue = Math.floor(Math.random() * 12) + 1;
-            console.log(randomValue);
-         
-            
-            // give each crystal data attribute called 
-            $("#crystal").attr("data-crystalvalue", randomValue[i]);
-            
-            var imageValue = $("crystal");
+           
+            // $("#crystal-one").attr("value", randomValue[0]);
 
-          console.log(imageValue);
+            // $("#crystal-one").data("value2", randomValue[0]);
+
+          console.log(randomValue);
+          
+            // push each number to empyt array
+            // then join with individual id for each click event 
             
-      
-        
+            
+            
+           
+          
+            
         
         } 
 
   
 // function for click event
-        // lines 63 on in 12.html activity simple crystal game
+        // 
 
 
-        // $(".crystal").on("click", function(event) {
+         $("#crystal-one").on("click", function(event) {
             
         //     // extract value for crystal assigned in last step using data tag
-        //     var crystalValue = ($(this).attr("data-crystalvalue"));
-        //     console.log(crystalValue);
-        //     crystalValue = parseInt(crystalValue);
-            
+        console.log(this.value);
+        // console.log("____");
+        // console.log(event);
+
+        //   Add picked values together
         //     counter += crystalValue;
     
         //     $(".count-text").text(counter);
-        //     console.log(crystalValue);
-        // });
+        //    
+         });
 
        
     }   
