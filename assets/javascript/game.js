@@ -82,14 +82,15 @@ var losses = 0;
          $("#crystal-one").on("click", function(event) {
             
         //     // extract value for crystal assigned in last step using data tag
-        console.log(this.value);
+        var crystalValue = randomValue[0];
+        console.log(crystalValue);
         // console.log("____");
-        // console.log(event);
+    //    console.log(event);
 
         //   Add picked values together
-        //     counter += crystalValue;
-    
-        //     $(".count-text").text(counter);
+           counter += crystalValue;
+    console.log(counter);
+         $(".count-text").text(counter);
         //    
          });
 
