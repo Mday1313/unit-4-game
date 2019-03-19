@@ -1,6 +1,9 @@
 
 
-
+h1 {
+    text-align: center;
+    margin: 30px;
+}
 
 .target-number {
     font-weight: bold;
@@ -12,4 +15,17 @@
 
 .crystal-image {
     width: 150px;
+}
+
+.count-text {
+    height: 40%;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 36px;
+    color: #236d72;
+}
+
+.count-text-box {
+
 }

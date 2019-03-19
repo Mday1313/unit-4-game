@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     // Declare global variables targetNumber (will display at top for user to match), empty crystal array [will hold randomly generated crystal values], counter
 
-    var targetNumber = 0;
+
 
 
 
@@ -21,14 +21,20 @@ $(document).ready(function () {
     var isTargetReached = false;
     var wins = 0;
     var losses = 0;
+    var randomValue = [];
+// randomly pick number to match (TARGET NUMBER) limit 19-120
+var targetNumber;
 
     // Update Display
     // function to update display
     // picks new numbers targetNumber and guess array
     // $("".count-text").empty();
-    function updateDisplay() {
-        $(".target-number").empty();
 
+    function updateDisplay() {
+        
+        $(".count-text").empty();
+        randomValue = [];
+        targetNumber = Math.floor(Math.random() * (120 - 19 + 1) + 19);
 
     }
 
@@ -38,60 +44,58 @@ $(document).ready(function () {
     // pick numbers
 
     function reset() {
+       
         updateDisplay();
+        
         randNumber();
-        createCrystalPicker();
+        
     }
+
+
+
+
     // function that picks numbers 
     function randNumber() {
 
-        // randomly pick number to match (TARGET NUMBER) limit 19-120
-        targetNumber = Math.floor(Math.random() * (120 - 19 + 1) + 19);
+        counter = 0;
+
         $(".target-number").text(targetNumber);
         // for each crystal,
         // randomly pick different number for each crystal, value between 1-12
 
-        var randomValue = [];
+        
         for (var i = 0; i < 3; i++) {
             randomValue[i] = Math.floor(Math.random() * 12) + 1;
             randomValue.push(i);
 
-
-            // $("#crystal-one").attr("value", randomValue[0]);
-
-            // $("#crystal-one").data("value2", randomValue[0]);
-
             console.log(randomValue);
 
-            // push each number to empyt array
+            // push each number to empty array
             // then join with individual id for each click event 
-
-
-
-
-
-
 
         }
 
-
+    
         // function for click event
         // 
+   
 
+    
 
         $("#crystal-one").on("click", function (event) {
 
             //     // extract value for crystal assigned in last step using data tag
             var crystalValue = randomValue[0];
             console.log(crystalValue);
-            // console.log("____");
-            //    console.log(event);
+          
 
             //   Add picked values together
             counter += crystalValue;
-            console.log(counter);
+           
             $(".count-text").text(counter);
-            //    
+            checkWin();
+             
+            
         });
 
         $("#crystal-two").on("click", function (event) {
@@ -104,7 +108,8 @@ $(document).ready(function () {
             counter += crystalValue;
             console.log(counter);
             $(".count-text").text(counter);
-            //    
+            checkWin();
+            
         });
 
         $("#crystal-three").on("click", function (event) {
@@ -119,7 +124,8 @@ $(document).ready(function () {
             counter += crystalValue;
             console.log(counter);
             $(".count-text").text(counter);
-            //    
+            checkWin();
+            
         });
 
         $("#crystal-four").on("click", function (event) {
@@ -134,42 +140,49 @@ $(document).ready(function () {
             counter += crystalValue;
             console.log(counter);
             $(".count-text").text(counter);
-            //    
+            //call function to check for win
+            checkWin();
+           
         });
+        
+        
+        
+        
+    } 
+    
+    function checkWin() {
+        console.log("count: " + counter);
+        console.log("target " + targetNumber);
+
+        if (targetNumber === counter) {
+            // write "U win"
+            $(".progress").text("You Win!");
+            // wins++
+            wins++;
+            $(".wins").text(wins);
+            reset();
+        }
+        else if (counter >= targetNumber) {
+            // write "U lose"
+            $(".progress").text("You Lose!");
+            // losses--
+            losses++;
+            $(".losses").text(losses);
+            reset()
+        } else {
+            //              write "Make another choice"
+            $(".progress").text("Make another selection.");
+            // }
+
+        }
+
+   
+
 
     }
+      
 
+    reset();
 
-
-
-
-
-
-
-
-
-
-    // if 
-
-
-
-    // counter += crystalValue;
-
-    // if (counter === targetNumber) {
-    // write "U win"
-    // wins++
-    // reset()
-    // }
-    // else if (counter >= targetNumber) {
-    // write "U lose"
-    // losses--
-    // reset()
-    // } 
-    // else {
-    //              write "Make another choice"
-    // }
-
-
-    randNumber();
-
+    
 });
