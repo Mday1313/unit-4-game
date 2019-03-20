@@ -2,8 +2,9 @@
 week 4 homework
 
 
-How to play the Game.
+How to play the Game. 
 
+Test your math and logic skills in this action packed game. Collect the same number of crystals without going over to win the round. Number of points for each crystal will change each round
 
 
 Pseudocode

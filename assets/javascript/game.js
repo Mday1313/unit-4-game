@@ -171,7 +171,7 @@ var targetNumber;
             reset()
         } else {
             //              write "Make another choice"
-            $(".progress").text("Make another selection.");
+            $(".progress").text("Journey On");
             // }
 
         }

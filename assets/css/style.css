@@ -8,6 +8,9 @@ body {
 h1 {
     text-align: center;
     margin: 30px;
+    color: #3b3444;
+
+    text-shadow: 2px 2px whitesmoke;
 }
 
 p {
@@ -20,8 +23,8 @@ p {
     
 }
 
-.main-card {
-    opacity: 0.25;
+.box-set-1 {
+   margin-left: 20px;
 }
 
 .target-number {
@@ -29,22 +32,47 @@ p {
     text-align: center;
     margin-top: 20px;
     font-size: 36px;
-    color: #236d72;
+    color: #3b3444;
+    text-shadow: 1px 1px whitesmoke;
 }
 
 .crystal-image {
     width: 150px;
+    
 }
 
 .count-text {
     height: 40%;
     font-weight: bold;
-    text-align: center;
+    text-align: right;
     margin-top: 20px;
     font-size: 36px;
-    color: #236d72;
+    color: #3b3444;
+    text-shadow: 1px 1px whitesmoke;
+    padding-left: 40px;
+}
+.card {
+    background: #756872;
+    margin-bottom: 10px;
+    opacity: .80;
+    font-weight: bold;
+}
+.wins {
+    color: #3b3444;
+    text-shadow: 1px 1px whitesmoke;
+
 }
 
-.count-text-box {
+.losses {
+    color: #3b3444;
+    text-shadow: 1px 1px whitesmoke;
+}
 
+.progress {
+    background: #756872;
+    color: whitesmoke;
+    font-size: 18px;
+    height: 24px;
+    
+    font-weight: bold;
 }
