@@ -35,7 +35,7 @@ var targetNumber;
         $(".count-text").empty();
         randomValue = [];
         targetNumber = Math.floor(Math.random() * (120 - 19 + 1) + 19);
-
+        
     }
 
     // function to reset the game, calls on all the function necessary to begin
@@ -46,8 +46,8 @@ var targetNumber;
     function reset() {
        
         updateDisplay();
-        
         randNumber();
+        
         
     }
 
@@ -64,9 +64,9 @@ var targetNumber;
         // randomly pick different number for each crystal, value between 1-12
 
         
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 4; i++) {
             randomValue[i] = Math.floor(Math.random() * 12) + 1;
-            randomValue.push(i);
+            
 
             console.log(randomValue);
 
@@ -82,7 +82,7 @@ var targetNumber;
 
     
 
-        $("#crystal-one").on("click", function (event) {
+        $("#crystal-one").unbind().on("click", function (event) {
 
             //     // extract value for crystal assigned in last step using data tag
             var crystalValue = randomValue[0];
@@ -98,7 +98,7 @@ var targetNumber;
             
         });
 
-        $("#crystal-two").on("click", function (event) {
+        $("#crystal-two").unbind().on("click", function (event) {
 
             //     // extract value for crystal assigned in last step using data tag
             var crystalValue = randomValue[1];
@@ -112,7 +112,7 @@ var targetNumber;
             
         });
 
-        $("#crystal-three").on("click", function (event) {
+        $("#crystal-three").unbind().on("click", function (event) {
 
             //     // extract value for crystal assigned in last step using data tag
             var crystalValue = randomValue[2];
@@ -128,7 +128,7 @@ var targetNumber;
             
         });
 
-        $("#crystal-four").on("click", function (event) {
+        $("#crystal-four").unbind().on("click", function (event) {
 
             //     // extract value for crystal assigned in last step using data tag
             var crystalValue = randomValue[3];
