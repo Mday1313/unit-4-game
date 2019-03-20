@@ -2,15 +2,17 @@ body {
     background-image: url(../images/Dark-Crystal-Visual-History-1-06302017.jpg);
     background-position: top center;
     background-size: 100%;
-    overflow: hidden;
+    
 }
 
 h1 {
     text-align: center;
     margin: 30px;
     color: #3b3444;
+    padding-bottom: 30px;
 
-    text-shadow: 2px 2px whitesmoke;
+    text-shadow: 3px 3px #756872,
+                4px 4px whitesmoke;
 }
 
 p {
@@ -34,6 +36,7 @@ p {
     font-size: 36px;
     color: #3b3444;
     text-shadow: 1px 1px whitesmoke;
+    background: #756872;
 }
 
 .crystal-image {
@@ -50,6 +53,7 @@ p {
     color: #3b3444;
     text-shadow: 1px 1px whitesmoke;
     padding-left: 40px;
+    
 }
 .card {
     background: #756872;
@@ -60,12 +64,13 @@ p {
 .wins {
     color: #3b3444;
     text-shadow: 1px 1px whitesmoke;
-
+    font-weight: bold;
 }
 
 .losses {
     color: #3b3444;
     text-shadow: 1px 1px whitesmoke;
+    font-weight: bold;
 }
 
 .progress {

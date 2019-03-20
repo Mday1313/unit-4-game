@@ -17,103 +17,110 @@
     <!-- Head page "Crystal Collector!" -->
     <h1>Dark Crystal Collector</h1>
 
-    <div class="row">
+
+    <div class="container-fluid">
+
+        <div class="row">
 
 
 
 
-        <div class="col-sm-2 box-set-1">
-            <div class="card" id="target-number-box" style="width: 18rem; height: 30%;">
-                <div class="card-body">
-                    <h5 class="card-title">Number to match: </h5>
-                    <div class="target-number"></div>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Your total is:   <span class="count-text"></span></h5>
-
-                </div>
-            </div>
-            
-
-
-        </div>
-        <div class="col-sm-1">
-
-        </div>
-
-        <div class="col-sm-6">
-
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="card" main-card>
-                        <div class="card-body">
-                            <h5 class="card-title">Instructions</h5>
-                            <p class="instructions">You will be given a random number at the start of the game.</p>
-                            <p>There are four creatures below. By clicking on a creature you will add a specific amount
-                                of points to your total score.</p>
-                            <p>You win the game by matching your score to random number, you lose the game if your total
-                                score goes above the random number.</p>
-                            <p>The value of each creature is hidden from you until you click on it.</p>
-                            <p>Each time when the game starts, the game will change the values of each creature.</p>
-                        </div>
+            <div class="col-sm-2 box-set-1">
+                <div class="card" id="target-number-box" style="width: 100%; height: 30%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Number to match: </h5>
+                        <div class="target-number"></div>
                     </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-sm-3 crystals">
-                            <img class="crystal" value="3" id="crystal-one"
-                                src="assets/images/johnny-fraser-allen-slavemaster.jpg" width="100px">
-                        </div>
-                        <div class="col-sm-3 crystals">
-                            <img class="crystal" id="crystal-two"
-                                src="assets/images/johnny-fraser-allen-mystic-cook.jpg" width="100px">
-                        </div>
-                        <div class="col-sm-3 crystals">
-                            <img class="crystal" id="crystal-three"
-                                src="assets/images/johnny-fraser-allen-garthim-master.jpg" width="100px" height="100%">
-                        </div>
-
-                        <div class="col-sm-3 crystals">
-                            <img class="crystal" id="crystal-four" src="assets/images/DC_3111_SkeksisIllustration.jpg"
-                                width="120px">
-                        </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Your total is: <span class="count-text"></span></h5>
 
                     </div>
-
                 </div>
+
+
+
+            </div>
+            <div class="col-sm-1">
+
             </div>
 
-        </div>
+            <div class="col-sm-6">
 
-        <div class="col-sm-2">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title"><span class="progress"></span></h5>
-                            <br>
-                            <h5 class="card-title">Wins: <span class="wins"></span></h5>
-                            <br>
-                            <h5 class="card-title">Losses: <span class="losses"></span></h5>
-                            <br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card" main-card>
+                            <div class="card-body">
+                                <h5 class="card-title">Instructions</h5>
+                                <p class="instructions">You will be given a random number at the start of the game.</p>
+                                <p>There are four creatures below. By clicking on a creature you will add a specific
+                                    amount
+                                    of points to your total score.</p>
+                                <p>You win the game by matching your score to random number, you lose the game if your
+                                    total
+                                    score goes above the random number.</p>
+                                <p>The value of each creature is hidden from you until you click on it.</p>
+                                <p>Each time when the game starts, the game will change the values of each creature.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3 crystals">
+                                <img class="crystal" value="3" id="crystal-one"
+                                    src="assets/images/johnny-fraser-allen-slavemaster.jpg" width="100px">
+                            </div>
+                            <div class="col-sm-3 crystals">
+                                <img class="crystal" id="crystal-two"
+                                    src="assets/images/johnny-fraser-allen-mystic-cook.jpg" width="100px">
+                            </div>
+                            <div class="col-sm-3 crystals">
+                                <img class="crystal" id="crystal-three"
+                                    src="assets/images/johnny-fraser-allen-garthim-master.jpg" width="100px"
+                                    height="100%">
+                            </div>
+
+                            <div class="col-sm-3 crystals">
+                                <img class="crystal" id="crystal-four"
+                                    src="assets/images/DC_3111_SkeksisIllustration.jpg" width="120px">
+                            </div>
 
                         </div>
+
                     </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><span class="progress"></span></h5>
+                                <br>
+                                <h5 class="card-title">Wins: <span class="wins"></span></h5>
+                                <br>
+                                <h5 class="card-title">Losses: <span class="losses"></span></h5>
+                                <br>
+
+                            </div>
+                        </div>
 
 
 
+
+                    </div>
 
                 </div>
 
             </div>
 
+            <div class="col-sm-0.5">
+
+            </div>
+
         </div>
-
-        <div class="col-sm-0.5">
-
-        </div>
-
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
