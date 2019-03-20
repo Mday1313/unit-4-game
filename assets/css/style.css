@@ -1,8 +1,27 @@
-
+body {
+    background-image: url(../images/Dark-Crystal-Visual-History-1-06302017.jpg);
+    background-position: top center;
+    background-size: 100%;
+    overflow: hidden;
+}
 
 h1 {
     text-align: center;
     margin: 30px;
+}
+
+p {
+    font-size: 14px
+}
+
+.instructions {
+    margin-bottom: 20px;
+   
+    
+}
+
+.main-card {
+    opacity: 0.25;
 }
 
 .target-number {
